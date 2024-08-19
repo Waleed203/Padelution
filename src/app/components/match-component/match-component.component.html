@@ -1,0 +1,69 @@
+
+
+<div class="main-container" *ngFor="let match of matches">
+  <div class="match-type">
+    <div class="app-font match-title">{{ match.match_title }}</div>
+    <div class="match-desc" *ngIf="match.desc != '' ">
+      <div class="app-font descText">{{ match.desc }}</div>
+      <div class="dot"></div>
+      <div class="app-font descText">{{ match.location }}</div>
+    </div>
+  </div>
+  
+  
+  <div class="match">
+    <span class="fi fi-fi"></span>
+    <div class="app-font team_name">{{ match.teams[0] }}</div>
+    <div class="app-font team_score">
+      <img src="./assets/icon/union.svg" />
+      24
+    </div>
+  </div>
+  
+  <div class="match_team" style="margin-bottom: 4px">
+    <div class="match_details">
+      <span class="fi fi-fi"></span>
+      <div class="app-font team_name">{{ match.teams[1] }}</div>
+      <div class="app-font team_score">
+        <img src="./assets/icon/union.svg" />
+        24
+      </div>
+    </div>
+    <div class="scheduledOn app-font">Scheduled on</div>
+  </div>
+  
+  <!-- vs  -->
+  <div class="vslineAndDate">
+    <div class="vsline">
+      <div class="left"></div>
+      <div class="vs app-font">vs</div>
+      <div class="right"></div>
+    </div>
+    <div class="date app-font">
+      <div class="date-time app-font">{{ match.scheduledAt }}</div>
+    </div>
+  </div>
+  
+  
+  <div class="match_team" style="margin-top: 4px">
+    <div class="match_details">
+      <span class="fi fi-fi"></span>
+      <div class="app-font team_name">{{ match.teams[2] }}</div>
+      <div class="app-font team_score">
+        <img src="./assets/icon/union.svg" />
+        24
+      </div>
+    </div>
+    <div class="location app-font">{{ match.padel_location }}</div>
+  </div>
+  
+  
+  <div class="match">
+    <span class="fi fi-fi"></span>
+    <div class="app-font team_name">{{ match.teams[3] }}</div>
+    <div class="app-font team_score">
+      <img src="./assets/icon/union.svg" />
+      24
+    </div>
+  </div>
+</div>

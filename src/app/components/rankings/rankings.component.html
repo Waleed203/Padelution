@@ -1,0 +1,20 @@
+
+<div class="eventslist-container mb-8">
+  <div class="eventslist" *ngFor="let data of rankings">
+    <div class="left-event">
+      <img src="./assets/icon/ranking.svg" />
+    </div>
+    <div class="right-event">
+      <div class="event-heading app-font">{{data.name}}</div>
+      <div class="event-location-withdate">
+        <div class="app-font">
+          {{data.desc}}
+        </div>
+      </div>
+    </div>
+    <div class="starIcon">
+      <img src="./assets/icon/yellow-star.svg" />
+    </div>
+  </div>
+
+</div>

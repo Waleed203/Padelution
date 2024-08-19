@@ -1,0 +1,33 @@
+<div class="wrapper">
+
+  <ion-searchbar class="custom-searchbar app-font" placeholder="Type to search"></ion-searchbar>
+
+  <div class="matches-head mb-4 mt-4">
+    <div class="app-font">Events</div>
+  </div>
+
+  <app-event [events]="events" section="favorites"></app-event>
+
+  
+  <div class="matches-head mb-4 mt-4">
+    <div class="app-font">Rankings</div>
+  </div>
+
+  <app-rankings [rankings]="rankings"></app-rankings>
+
+  
+  <div class="matches-head mb-4 mt-4">
+    <div class="app-font">Leagues</div>
+  </div>
+
+  <app-leagues [leagues]="leagues"></app-leagues>
+
+  
+  <div class="matches-head mb-4 mt-4">
+    <div class="app-font">Players</div>
+  </div>
+
+  <app-players [players]="players"></app-players>
+
+</div>
+

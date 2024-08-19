@@ -1,0 +1,147 @@
+  <ion-content [fullscreen]="true">
+    <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+      <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    
+    <div class="wrapper1">
+      <div class="starImage">
+        <!-- <img src="./assets/icon/union.svg" /> -->
+        <svg width="auto" height="150" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.7377 5.54819C9.47431 2.52091 0.376587 0.733788 0.376587 0.733788C6.29171 3.36119 7.94007 4.93443 7.81747 6.00139C7.69487 7.06827 5.95627 11.2533 5.95627 11.2533L10.1091 8.15959L13.567 11.2661C13.567 11.2661 11.6008 7.15535 11.7631 6.43079C11.9253 5.70623 13.7377 5.54819 13.7377 5.54819Z" fill="#232B3B"/>
+          <path d="M8.95471 2.89137L9.67419 0.749413L10.6002 3.55633C10.2605 3.32309 8.95471 2.89137 8.95471 2.89137Z" fill="#232B3B"/>
+        </svg>
+
+          
+
+      </div>
+      <div class="topHeader">
+        <div class="flagAndCountry" (click)="openChangeLocationModal()">
+          <span class="fi fi-fi mr-4"></span>
+          <div class="mr-4 app-font country">Finland</div>
+          <ion-icon name="chevron-down"></ion-icon>
+        </div>
+        <ion-button>
+          <ion-icon slot="start" name="add"></ion-icon>
+          Create
+        </ion-button>
+      </div>
+
+      <div class="segment-container">
+        <ion-segment [value]="selectedTab" (ionChange)="segmentChanged($event)">
+          <ion-segment-button value="overview">
+            <ion-label class="app-font">Overview</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="favorites">
+            <ion-label class="app-font">Favorites</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </div>
+    </div>
+    
+    <app-overview *ngIf="selectedTab == 'overview' " [events]="events"></app-overview>
+    <app-favorites *ngIf="selectedTab == 'favorites' "></app-favorites>
+
+  </ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

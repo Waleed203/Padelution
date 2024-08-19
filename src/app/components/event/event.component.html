@@ -1,0 +1,95 @@
+
+<div *ngIf="section == 'overview' && populated ">
+  <div class="main-container" *ngFor="let event of events">
+    <div class="event_date" *ngIf="populated">{{ event.month }}</div>
+
+    <div class="eventslist-container">
+      <div class="eventslist" *ngFor="let data of event.eventData">
+        <div class="left-event" [ngStyle]="{
+          'flexDirection': data.dateTo != 0 ? 'column' : 'row',
+        }">
+          <div class="app-font" [ngStyle]="{
+            'fontSize': data.dateTo != 0 ? '12px' : '16px'
+          }">
+            {{data.dateFrom}}.
+          </div>
+          <div class="app-font" *ngIf="data.dateTo != 0">-</div>
+          <div class="app-font" *ngIf="data.dateTo != 0">
+            {{data.dateTo}}.
+          </div>
+        </div>
+        <div class="right-event">
+          <div class="event-heading">{{data.title}}</div>
+          <div class="event-location">
+            <img src="./assets/icon/Location.svg" />
+            {{data.location}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<div *ngIf="section == 'overview' && !populated ">
+  <div class="main-container" *ngFor="let event of events">
+    <div class="event_date skeleton-loader"></div>
+
+    <div class="eventslist-container">
+      <div class="eventslist skeleton-loader" *ngFor="let data of event.eventData">
+        <!-- <div class="left-event skeleton-loader"></div> -->
+        <div class="right-event">
+          <div class="event-heading skeleton-loader"></div>
+          <div class="event-location skeleton-loader"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div *ngIf="section == 'favorites' ">
+  <div class="main-container">
+    <div class="eventslist-container mb-8">
+      <div class="eventslist" *ngFor="let data of events">
+        <div class="left-event">
+          <img src="./assets/icon/cal.svg" />
+        </div>
+        <div class="right-event">
+          <div class="event-heading app-font">{{data.title}}</div>
+          <div class="event-location-withdate">
+            <div class="app-font">
+              {{data.date}}
+            </div>
+            <div class="app-font">
+              <img src="./assets/icon/Location.svg" />
+              {{data.location}}
+            </div>
+          </div>
+        </div>
+        <div class="starIcon">
+          <img src="./assets/icon/yellow-star.svg" />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
